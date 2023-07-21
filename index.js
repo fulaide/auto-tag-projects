@@ -10,6 +10,8 @@ let fs = require('fs');
     async () => {
         try {
             core.notice("Calling my custom Action")
+
+            core.notice("input variable")
    
             // let baseUrl = "https://github.com/iotaledger/if-comms/issues/"
             // let title = "🐥+Test+Title"
@@ -30,6 +32,14 @@ let fs = require('fs');
             // };  
             // xmlhttp.open('GET', combined, true); 
             // xmlhttp.send();
+
+            const nameToGreet = core.getInput('my-color');
+            console.log(`Hello ${nameToGreet}!`);
+
+
+
+            const payload = JSON.stringify(github.context.payload, undefined, 2)
+            console.log(`The event payload: ${payload}`);
 
 
         } catch (error ) {
