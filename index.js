@@ -48,25 +48,15 @@ let fs = require('fs');
             const customMessage = core.getInput('my-color');
             console.log(`Custom Message ${customMessage}`);
 
-
-
-
-            
-
-
             const payloadString = JSON.stringify(github.context.payload, undefined, 2)
-
             const payloadObject = github.context.payload
             
             console.log(`Payload: ${payloadString}`);
             console.log(`Issue: ${payloadObject.issue.number}`);
-            
-
-            // console.log(`Issue: ${payload.issue.number }`);
-            // console.log(`Body: ${payload.issue.body }`);
-            // console.log(`Label: ${payload.issue.labels[0].name }`);
-            // console.log(`Mile: ${payload.issue.milestone}`);
-            // console.log(`Title: ${payload.issue.title}`);
+            console.log(`Body: ${payloadObject.issue.body}`);
+            console.log(`Label: ${payloadObject.issue.labels[0].name}`);
+            console.log(`Mile: ${payloadObject.issue.milestone}`);
+            console.log(`Title: ${payloadObject.issue.title}`);
 
         } catch (error ) {
             core.notice(error.message)
