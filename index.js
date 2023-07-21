@@ -37,13 +37,10 @@ let fs = require('fs');
             console.log(`Label is ${getLabel}!`);
 
             const getProject = core.getInput('project-url');
-            console.log(`Project is ${getProject}!`);
-
-            const getToken = core.getInput('github-token');
-            console.log(`Token is ${getToken}!`);
+            console.log(`Project url is ${getProject}!`);
 
             const customMessage = core.getInput('my-color');
-            console.log(`Hello ${customMessage}!`);
+            console.log(`Custom Message ${customMessage}!`);
 
 
 
@@ -53,11 +50,13 @@ let fs = require('fs');
 
             const payload = JSON.stringify(github.context.payload, undefined, 2)
 
-            console.log(`Issue: ${payload.issue.number }`);
-            console.log(`Body: ${payload.issue.body }`);
-            console.log(`Label: ${payload.issue.labels[0].name }`);
-            console.log(`Mile: ${payload.issue.milestone}`);
-            console.log(`Title: ${payload.issue.title}`);
+            console.log(`Issue: ${payload.issue }`);
+
+            // console.log(`Issue: ${payload.issue.number }`);
+            // console.log(`Body: ${payload.issue.body }`);
+            // console.log(`Label: ${payload.issue.labels[0].name }`);
+            // console.log(`Mile: ${payload.issue.milestone}`);
+            // console.log(`Title: ${payload.issue.title}`);
 
         } catch (error ) {
             core.notice(error.message)
