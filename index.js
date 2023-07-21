@@ -54,11 +54,13 @@ let fs = require('fs');
             
 
 
-           // const payload = JSON.stringify(github.context.payload, undefined, 2)
+            const payloadString = JSON.stringify(github.context.payload, undefined, 2)
 
-            const payload = (github.context.payload, undefined, 2)
+            const payloadObject = github.context.payload
             
-            console.log(`Issue: ${payload.issue }`);
+            console.log(`Payload: ${payloadString}`);
+            console.log(`Issue: ${payloadObject.issue.number}`);
+            
 
             // console.log(`Issue: ${payload.issue.number }`);
             // console.log(`Body: ${payload.issue.body }`);
