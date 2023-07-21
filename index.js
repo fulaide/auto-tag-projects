@@ -33,14 +33,31 @@ let fs = require('fs');
             // xmlhttp.open('GET', combined, true); 
             // xmlhttp.send();
 
-            const nameToGreet = core.getInput('my-color');
-            console.log(`Hello ${nameToGreet}!`);
+            const getLabel = core.getInput('labeled');
+            console.log(`Label is ${getLabel}!`);
 
+            const getProject = core.getInput('project-url');
+            console.log(`Project is ${getProject}!`);
+
+            const getToken = core.getInput('github-token');
+            console.log(`Token is ${getToken}!`);
+
+            const customMessage = core.getInput('my-color');
+            console.log(`Hello ${customMessage}!`);
+
+
+
+
+            
 
 
             const payload = JSON.stringify(github.context.payload, undefined, 2)
-            console.log(`The event payload: ${payload}`);
 
+            console.log(`Issue: ${payload.issue.number }`);
+            console.log(`Body: ${payload.issue.body }`);
+            console.log(`Label: ${payload.issue.labels[0].name }`);
+            console.log(`Mile: ${payload.issue.milestone}`);
+            console.log(`Title: ${payload.issue.title}`);
 
         } catch (error ) {
             core.notice(error.message)
