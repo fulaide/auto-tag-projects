@@ -34,13 +34,19 @@ let fs = require('fs');
             // xmlhttp.send();
 
             const getLabel = core.getInput('labeled');
-            console.log(`Label is ${getLabel}!`);
+            console.log(`Label is ${getLabel}`);
+
+            if(getLabel === "Parent") {
+                console.log(`Ready to go`);
+            } else {
+                console.log(`Not a parent task`);
+            }
 
             const getProject = core.getInput('project-url');
-            console.log(`Project url is ${getProject}!`);
+            console.log(`Project url is ${getProject}`);
 
             const customMessage = core.getInput('my-color');
-            console.log(`Custom Message ${customMessage}!`);
+            console.log(`Custom Message ${customMessage}`);
 
 
 
