@@ -55,8 +55,10 @@ let fs = require('fs');
             console.log(`Issue: ${payloadObject.issue.number}`);
             console.log(`Body: ${payloadObject.issue.body}`);
             console.log(`Label: ${payloadObject.issue.labels[0].name}`);
-            console.log(`Mile: ${payloadObject.issue.milestone}`);
+            console.log(`Mile: ${payloadObject.issue.milestone.title}`);
             console.log(`Title: ${payloadObject.issue.title}`);
+            console.log(`Assignee: ${payloadObject.issue.assignee.login}`);
+            
 
         } catch (error ) {
             core.notice(error.message)
