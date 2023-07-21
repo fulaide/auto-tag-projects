@@ -1,0 +1,24 @@
+{
+  "name": "auto-tag-projects",
+  "version": "1.0.0",
+  "description": "Github action to automatically apply custom field tags to a new issue for Github Project views",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulaide/auto-tag-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fulaide/auto-tag-projects/issues"
+  },
+  "homepage": "https://github.com/fulaide/auto-tag-projects#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

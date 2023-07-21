@@ -1,0 +1,55 @@
+name: Visual production - subtask asset
+description: Template for Visual task individual subtasks for asset production
+title: "[\U0001F3A8]: "
+labels: ["Visual", "Asset"]
+assignees: [""]
+body:
+  - type: dropdown
+    id: asset-type
+    attributes:
+      label: Asset Type
+      description: What asset type should be produced?
+      options:
+        - Blog Header
+        - Content Image
+        - Social Image
+        - Animation
+        - Video
+        - Storyboard
+        - UI Element/ Graphic
+    validations:
+      required: true
+  - type: textarea
+    id: what-to-do
+    attributes:
+      label: Asset description
+      description: Describe the idea / task for the asset production
+      placeholder: Briefing
+      value: " "
+    validations:
+      required: true
+  - type: dropdown
+    id: requester
+    attributes:
+      label: Who requested the asset?
+      description: Choose where this request is coming from
+      options:
+        - COM
+        - ECO
+        - TEA
+        - OTHER
+    validations:
+      required: true
+  - type: dropdown
+    id: brand
+    attributes:
+      label: For which brand?
+      description: Choose the brand the asset is for
+      options:
+        - IOTA
+        - SMR
+        - TEA
+        - TOUCH
+        - TEA
+    validations:
+      required: true
