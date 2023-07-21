@@ -1,5 +1,10 @@
 name: "Auto tag issues"
 description: "automatically applies custom tags to newly opened issues for git projects"
+inputs:
+  task-type:  # id of input
+    description: 'Task Type'
+    required: false
+    default: 'Blog'
 runs: 
   using: node16
   main: index.js

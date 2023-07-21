@@ -45,7 +45,7 @@ let fs = require('fs');
             const getProject = core.getInput('project-url');
             console.log(`Project url is ${getProject}`);
 
-            const customMessage = core.getInput('my-color');
+            const customMessage = core.getInput('task-type');
             console.log(`Custom Message ${customMessage}`);
 
             const payloadString = JSON.stringify(github.context.payload, undefined, 2)
